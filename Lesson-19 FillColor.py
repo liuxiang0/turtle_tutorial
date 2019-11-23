@@ -18,8 +18,7 @@ while True:
     powell.left(170)
     if abs(powell.pos()) < 1:    # turtle.pos() 返回的值是turtle.Vec2D,重新回到了起始点
         break
-    
-    
+  
 powell.end_fill()
 # turtle.done()
 picture.exitonclick()      # 不能同时使用 turtle.done() 和 screen.exitonclick()

@@ -1,21 +1,20 @@
 # -*- coding: utf-8 -*-
 """
-Lesson 7 : 画正n边形的轴
+Lesson 7 : 给定n值，画正n边形的轴
 """
 
 import turtle
 
-wn = turtle.Screen()
 
+wn = turtle.Screen()
 xpen = turtle.Turtle()
 xpen.shape("triangle")
 
 n = int(input("How many legs should this sprite have? "))
 angle = 360 / n
-
 len = 168
 
-for i in range(n):
+for _ in range(n):
     # draw the leg
     xpen.right(angle)
     xpen.forward(len)
@@ -27,5 +26,4 @@ for i in range(n):
     xpen.right(180)
 
 xpen.shape("circle")
-
 wn.exitonclick()
