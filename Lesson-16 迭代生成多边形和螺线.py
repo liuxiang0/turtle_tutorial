@@ -7,17 +7,17 @@ import turtle
 
 # 引入函数，过程，将重复动作组合在一个函数中。
 def draw_triangle(turtle,length):
-    for i in range(3):
+    for _ in range(3):
         turtle.fd(length)
         turtle.left(120)
 
 def draw_poly(turtle,length,n):     # draw n-polygon 画正n边形
-    for i in range(n):
+    for _ in range(n):
         turtle.fd(length)
         turtle.left(360/n)    
 
 def draw_spiral(turtle,length,angle,scale,n):
-    for i in range(1,n):
+    for _ in range(1,n):
         turtle.forward(length)
         turtle.left(angle)
         length *= scale
@@ -34,11 +34,11 @@ t.color("green")      # 改变画笔颜色,还有green,blue,black,white,pink,...
 
 t.speed(0)
 
-draw_spiral(t,10,90,1.05,60)
+draw_spiral(t,10,90,1.07,60)
 
 """for n in range(1,50):
     t.fd(n)                 # 也可以隐藏之，原地旋转。
     draw_poly(t,n,4)        # 改变 为正 5,4,3边形
     t.right(60)             # 改变角度试试，5,10,15
-   """     
+"""     
 scr.exitonclick()

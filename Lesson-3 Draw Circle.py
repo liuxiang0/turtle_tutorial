@@ -4,28 +4,27 @@ Lesson 3 : Draw a circle 画圆、半圆、弧、正多边形
 """
 
 import turtle
+from turtle_conf import Tpen
+
+
+def Circles(pen, radius, num):
+    for i in range(num):
+        pen.circle(radius * (i + 1))
+
+"""call: circle(radius)                  # 画整个圆， 负值也可以
+    |--or: circle(radius, extent)        # 画弧--部分圆 180 半圆
+    |--or: circle(radius, extent, steps)
+    |--or: circle(radius, steps=6)       # 画六边形
+"""        
 
 win = turtle.Screen()  # Create a graphics windows 创建绘画窗口
 
-t = turtle.Pen()    # 初始化乌龟程序，调出图形框，准备好画笔
-t.shape("turtle")   # 改变画笔形状为一只乌龟，缺省是箭头arrow，
-# 还可以为 'circle'-圆, 'square'-正方形, 'triangle'-三角形, 'classic'.  
+t = Tpen(shape="turtle", drawcolor='red', size=2)
 
-t.width(5)          # 改变线宽度
-t.color("red")      # 改变画笔颜色,还有green,blue,black,white,pink,...,或者(r,g,b)
 mycolor = ["red","green","blue"]
 
-for i in range(3):
-    t.color(mycolor[i])
-    t.circle(50*(i+1))
-    
-
-"""call: circle(radius)                  # 画整个圆
-    |--or: circle(radius, extent)        # 画弧--部分圆
-    |--or: circle(radius, extent, steps)
-    |--or: circle(radius, steps=6)       # 画六边形
-"""
-    
+Circles(t, 30,5)
+   
 for i in range(3):
     t.color(mycolor[i])
     t.circle(-50*(i+1),steps=(i+1)*3)  # 画正n边形
