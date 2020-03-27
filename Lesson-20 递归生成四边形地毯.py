@@ -16,13 +16,13 @@ def sierpinski2(turtle,length,level):
         length /= 3.0
         sierpinski2(turtle,length,level-1)
 
-        for i in range(2):
+        for _ in range(2):
             turtle.penup()
             turtle.forward(length)
             turtle.pendown()
             sierpinski2(turtle,length,level-1)
         
-        for i in range(2):
+        for _ in range(2):
             turtle.penup()
             turtle.left(90)
             turtle.forward(length)
@@ -50,7 +50,7 @@ def sierpinski2(turtle,length,level):
         t.goto(curpos[0],curpos[1])    # 回到起始点，方向也复原
       
 def square(turtle,length):
-    for i in range(4):
+    for _ in range(4):
         turtle.forward(length)
         turtle.left(90)
         
