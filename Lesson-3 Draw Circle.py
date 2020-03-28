@@ -23,7 +23,7 @@ t = Tpen(shape="turtle", drawcolor='red', size=2)
 
 mycolor = ["red","green","blue"]
 
-Circles(t, 30,5)
+Circles(t, 30,2)
    
 for i in range(3):
     t.color(mycolor[i])

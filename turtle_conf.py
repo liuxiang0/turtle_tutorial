@@ -7,7 +7,15 @@ import turtle
 colors = ['red', 'green', 'blue', 'yellow', 'black', 'pink', 'cyan', 'purple', 'white']
 
 t_color = random.choice(colors)
-
+'''前=turtle.forward
+后=turtle.backward
+左=turtle.left
+右=turtle.right
+抬=turtle.penup
+落=turtle.pendown
+色=turtle.color
+宽=turtle.width
+'''
 def random_color():
     # Get random color (r,g,b)
 
